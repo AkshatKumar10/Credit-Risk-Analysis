@@ -8,3 +8,4 @@ imblearn
 streamlit==1.35.0
 joblib
 altair==4.2.2
+pillow==10.2.0
