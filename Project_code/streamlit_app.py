@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-print(BASE_DIR)
+
 model  = joblib.load(os.path.join(BASE_DIR, "logistic_regression_model.joblib"))
 scaler = joblib.load(os.path.join(BASE_DIR, "scaler.joblib"))
 le_age  = joblib.load(os.path.join(BASE_DIR, "le_age.joblib"))
