@@ -2,11 +2,14 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
+import os
 
-model  = joblib.load("logistic_regression_model.joblib")
-scaler = joblib.load("scaler.joblib")
-le_age  = joblib.load("le_age.joblib")
-le_type = joblib.load("le_type.joblib")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+print(BASE_DIR)
+model  = joblib.load(os.path.join(BASE_DIR, "logistic_regression_model.joblib"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.joblib"))
+le_age  = joblib.load(os.path.join(BASE_DIR, "le_age.joblib"))
+le_type = joblib.load(os.path.join(BASE_DIR, "le_type.joblib"))
 
 THRESHOLD = 0.4
 
